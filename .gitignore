@@ -1,0 +1,55 @@
+# Auth & secrets
+auths/
+data/
+*.key
+*.pem
+*.env
+.env
+.env.*
+
+# Binaries (anchored to repo root only — bare "login"/"credit" would also ignore cmd/login/, cmd/credit/)
+/login
+/credit
+/wb2api
+/signin_bin
+
+# Config with secrets (use config.example.json)
+config.json
+
+# Build artifacts
+*.tmp
+__pycache__/
+
+# Backups (contains auth tokens)
+backups/
+
+# IDE
+.idea/
+.vscode/
+LOOP.md
+PLAN.md
+SPEC.md
+docs/
+
+# 设计/计划文档（但 README.md 必须进版本库）
+*.md
+!README.md
+# 嵌入二进制的系统提示词（*.md 默认忽略，但这份必须进版本库）
+!internal/prompt/defaultprompt.md
+!RELEASE_NOTES.md
+
+# Windows binaries
+/wb2api.exe
+/login.exe
+
+# 本机运行产物（部署备份二进制、pid、日志）
+/wb2api.*
+/*.pid
+/*.log
+/credit.exe
+
+# 本地验证工具（判据逆向过程脚本，结论沉淀于 data/desktop-task-protocol.md）
+/cmd/desktopverify*/
+*.zip
+server.exe
+.DS_Store
